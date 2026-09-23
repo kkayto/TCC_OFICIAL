@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             materia: "filosofia",
             titulo: "Questionário",
             data: "22/06/2026",
-            status: "Concluído"
+            status: "Pendente"
         },
         {
             materia: "geografia",
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             materia: "ingles",
             titulo: "Seminário de Filmes",
             data: "27/06/2026",
-            status: "Concluído"
+            status: "Pendente"
         }
     ];
 
@@ -75,20 +75,36 @@ document.addEventListener('DOMContentLoaded', () => {
         data,
         status
     }) {
-        return `
-            <div class="card-atividades ${materia}">
-                <div class="card-atividades-title">
-                      ${materia} - ${titulo}
-                </div>
-                <div class="card-atividades-data">
-                ${data}
-                </div>
+return `
+    <div class="card-atividades">
 
-                <div class="card-atividades-status">
-                    Status: ${status}
-                </div>
+        <div class="card-atividades-title">
+            ${materia}
+        </div>
+
+        <div class="atividade-conteudo">
+
+            <h3 class="card-atividades-conteudo">
+                ${titulo}
+            </h3>
+
+            <div class="atividade-informacoes">
+                <span class="card-atividades-data">
+                    <i class="fa-regular fa-calendar"></i>
+                    ${data}
+                </span>
             </div>
-        `;
+
+        </div>
+
+        <div class="atividade-status">
+            <span class="card-atividades-status">
+                ${status}
+            </span>
+        </div>
+
+    </div>
+`;
     }
 
     console.log('Atividades:', atividades);
