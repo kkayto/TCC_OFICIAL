@@ -224,6 +224,7 @@ body {
     font-weight: 600;
 }
 
+
 .content {
     grid-area: content;
     display: flex;
@@ -235,6 +236,23 @@ body {
     overflow-x: hidden;
     background-color: var(--fundo);
 }
+ 
+.dashboard-conteudo {
+    width: 96%;
+    height: 89%;
+    margin: 20px 30px;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr);
+    grid-template-rows: auto 1fr; 
+    align-items: stretch;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.resumo-section {
+    grid-column: 1;
+    grid-row: 1;
+}
 
 .resumo-title {
     font-size: 16px;
@@ -245,20 +263,22 @@ body {
     margin: 0 0 20px;
     animation: fadeDown .5s .1s ease both;
     text-align: left;
-    left: 100px;
-    margin-left: 80px
+
 }
 
 .resumo-inner {
-    display: flex;
-    flex-direction: row;
-    gap: 18px;
-    width: max-content
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    box-sizing: border-box;
 }
 
 .resumo-card {
-    flex: 0 0 290px;
-    min-height: 155px;
+    width: 100%;
+    min-width: 0;
+    min-height: 125px;
+    box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.96);
     border-radius: var(--raio);
     padding: 18px;
@@ -308,11 +328,13 @@ body {
     color: var(--vermelho)
 }
 
+
 .wrapper-atividades {
+    grid-column: 1;
+    grid-row: 2;
     width: 100%;
-    max-width: 1300px;
-    height: auto;
-    margin: 40px  0;
+    height: 100%;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -382,12 +404,14 @@ body {
     box-shadow: 0 0 0 3px rgba(115, 81, 223, .08);
 }
 
-.cards-container {
+.atividades-coluna .cards-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
     box-sizing: border-box;
+    max-height: none;
+    overflow: visible;
 }
 
 
@@ -447,10 +471,7 @@ body {
 
 .card-atividades-title {
     margin: 0;
-    padding: 5px 10px;
-    background: #f1edff;
-    color: #46308f;
-    border-radius: 20px;
+    color: #101d52; /* FIX: era estilo de badge (fundo roxo + pill) igual ao contador; agora é texto de título */
     font-size: 18px;
     font-weight: 750;
     line-height: 1.3;
@@ -525,6 +546,173 @@ body {
 
 .ver-todas-atividades i {
     font-size: 10px;
+}
+
+
+.coluna-calendario {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.calendario {
+    width: 98%;
+    height: 55%;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #e2e3ef;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(44, 55, 120, 0.07);
+}
+
+.calendario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendario-header h2 {
+    margin: 0;
+    color: #17245c;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.calendario-header button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #36458c;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.calendario-header button:hover {
+    background: #eeeaff;
+}
+
+
+.weekdays,
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.weekdays {
+    margin-top: 20px;
+    color: #7080a9;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.days {
+    gap: 5px;
+    margin-top: 28px;
+}
+
+.day,
+.today {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.day {
+    color: #344274;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.day:hover {
+    background: #eeeaff;
+}
+
+.today {
+    background: #584391;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.evento-info {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f8f7ff;
+    border: 1px solid #e2e3ef;
+    color: #59658c;
+    font-size: 13px;
+    text-align: center;
+}
+
+.wrapper-proximos {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(44, 55, 120, 0.07);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; 
+}
+
+.title-proximo {
+    margin: 0 0 12px;
+    color: #17245c;
+    font-size: 17px;
+    font-weight: 750;
+    text-align: left;
+}
+
+
+.wrapper-proximos .cards-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-sizing: border-box;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.wrapper-proximos .cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card-proximos {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 14px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e3ef;
 }
 
 
