@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repre</title>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <div class="navbar">
+            <div class="logo">
+                <div class="logo-icon">
+                    REPRE
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">Atividades</a>
+                <a href="#">
+                    Calendário
+                    <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <a href="#">Desempenho</a>
+                <a href="#">
+                    Atlética e Grêmio
+                    <i class="fa-solid fa-caret-down"></i>
+                </a>
+            </div>
+            <div class="sininho">
+                <i class="fa-solid fa-bell" style="color: #584391;"></i>
+            </div>
+            <div class="profile">
+                <img src="imagem-foto-perfil.jpg" alt="Foto de perfil">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="dashboard-conteudo">
+                <div class="dashboard">
+                    <div class="header-dash">
+                        <div class="header-dash-left">
+                            <div class="bola-header-dash">
+                                <i class="fa-solid fa-chart-line" style="font-size: 18px; color: #584391;"></i>
+                            </div>
+
+                            <div>
+                                <h2>Resumo de atividades</h2>
+                                <p>Seu desempenho geral</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="particoes">
+
+                        <div class="card-particoes">
+                            <div class="topo-particoes">
+                                <div class="circle verdin"><i class="fa-regular fa-circle-check"></i></div>
+                                <span class="numero verdin-text">24</span>
+                            </div>
+
+                            <h3>Concluídas</h3>
+                            <p class="variacao verdin-text">↑ 12%</p>
+                        </div>
+
+                        <div class="divisoria"></div>
+
+                        <div class="card-particoes">
+                            <div class="topo-particoes">
+                                <div class="circle amarelo"><i class="fa-regular fa-clock"></i></div>
+                                <span class="numero amarelo-text">11</span>
+                            </div>
+
+                            <h3>Pendentes</h3>
+                            <p class="variacao amarelo-text">↑ 3%</p>
+                        </div>
+
+                        <div class="divisoria"></div>
+
+                        <div class="card-particoes">
+                            <div class="topo-particoes">
+                                <div class="circle vermeio"><i class="fa-solid fa-circle-exclamation"></i></div>
+                                <span class="numero vermeio-text">5</span>
+                            </div>
+
+                            <h3>Não entregues</h3>
+                            <p class="variacao vermeio-text">↑ 2%</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="painel">
+                    <div class="header-painel">
+                        <div class="icon-header">
+                            <i class="fa-solid fa-chart-pie" style="color: #584391;"></i>
+                        </div>
+                        <div class="header-painel-left">
+
+
+                            <h2>Visão geral</h2>
+                            <p>Distribuição das suas atividades</p>
+
+                        </div>
+
+                        <div class="trocas">
+                            <button class="active">Gráfico</button>
+                        </div>
+                    </div>
+
+                    <div class="painel-content">
+                        <div class="chart">
+                            <div class="pizza">
+                                <div class="center">
+                                    <h1>40</h1>
+                                    <span>total de tarefas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dados">
+                            <div class="item">
+                                <div class="info">
+                                    <span class="bola green"></span>
+                                    <p>Concluídas</p>
+                                </div>
+
+                                <span>24 (57%)</span>
+                            </div>
+
+                            <div class="item">
+                                <div class="info">
+                                    <span class="bola yellow"></span>
+                                    <p>Pendentes</p>
+                                </div>
+
+                                <span>11 (26%)</span>
+                            </div>
+
+                            <div class="item">
+                                <div class="info">
+                                    <span class="bola red"></span>
+                                    <p>Não entregues</p>
+                                </div>
+
+                                <span style="margin-left: 5px;">2 (12%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="wrapper-painel-porMateria">
+                    <div class="painel-porMateria-container">
+                        <div class="painel-porMateria">
+                            <div class="header-painel-porMateria">
+                                <div class="icon-header-painel-porMateria">
+                                    <i class="fa-solid fa-chart-bar" style="color: #584391;"></i>
+                                </div>
+
+                                <div class="header-painel-porMateria-left">
+                                    <h2>Por Matérias</h2>
+                                    <p>Seu desempenho à cada matéria</p>
+                                </div>
+                            </div>
+
+                            <div class="painel-porMateria-content">
+                                <div class="materias">
+                                    <div class="materias-header">
+                                        <span>Matemática</span>
+                                        <span>85%</span>
+                                    </div>
+
+                                    <div class="barra-progresso">
+                                        <div class="progresso matematica"></div>
+                                    </div>
+                                </div>
+
+                                <div class="materias">
+                                    <div class="materias-header">
+                                        <span>Português</span>
+                                        <span>75%</span>
+                                    </div>
+
+                                    <div class="barra-progresso">
+                                        <div class="progresso portugues"></div>
+                                    </div>
+                                </div>
+
+                                <div class="materias">
+                                    <div class="materias-header">
+                                        <span>Física</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="barra-progresso">
+                                        <div class="progresso fisica"></div>
+                                    </div>
+                                </div>
+
+                                <div class="materias">
+                                    <div class="materias-header">
+                                        <span>Química</span>
+                                        <span>58%</span>
+                                    </div>
+                                    <div class="barra-progresso">
+                                        <div class="progresso quimica"></div>
+                                    </div>
+                                </div>
+
+                                <div class="materias">
+                                    <div class="materias-header">
+                                        <span>Sociologia</span>
+                                        <span>77%</span>
+                                    </div>
+                                    <div class="barra-progresso">
+                                        <div class="progresso sociologia"></div>
+                                    </div>
+                                </div>
+
+                                <div class="materias">
+                                    <div class="materias-header">
+                                        <span>Banco de Dados</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="barra-progresso">
+                                        <div class="progresso banco-dados"></div>
+                                    </div>
+                                </div>
+
+                                <div class="materias">
+                                    <div class="materias-header">
+                                        <span>Fiolosofia</span>
+                                        <span>88%</span>
+                                    </div>
+                                    <div class="barra-progresso">
+                                        <div class="progresso filosofia"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
